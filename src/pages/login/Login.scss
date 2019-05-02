@@ -1,6 +1,15 @@
+@import '../../theme/variables.scss';
+
 .login-background{
   width: 100%;
   height: 100vh;
+}
+
+.movingasone{
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  width: 10vw;
 }
 
 .login-form-container{
@@ -16,8 +25,10 @@
     flex-direction: column;
     
     .username-label{
-      margin-top: 1vw;
-      font-size: 1vw;
+      margin-top: 1.5vw;
+      color: #a8a1a1;
+      font-weight: bold;
+      font-size: 0.8vw;
     }
 
     .username-input{
@@ -28,12 +39,44 @@
 
     .password-label{
       margin-top: 1.5vw;
+      color: #a8a1a1;
+      font-weight: bold;
+      font-size: 0.8vw;
     }
 
     .password-input{
       margin-top: 0.5vw;
       padding-bottom: 0.5vw;
       width: 30vw;
+    }
+
+    .btn-login{
+      margin-top: 2vw;
+      border-radius: 2vw;
+      width: 12vw;
+      text-transform: none;
+      background-color: map-get($colors, primary);
+      transition: ease;
+      transition-duration: 0.5s;
+    }
+
+    .btn-login:hover {
+      background-color: map-get($colors, primary-dark);
+    }
+
+    .btn-login-disabled{
+      margin-top: 2vw;
+      border-radius: 2vw;
+      width: 12vw;
+      text-transform: none;
+      opacity: 0.6;
+      color: black;
+      background-color: map-get($colors, primary);
+    }
+
+    .arrow-icon{
+      color: black;
+      font-size: 1vw;
     }
   }
 }

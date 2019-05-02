@@ -1,5 +1,5 @@
 import App from './App';
-import AppReducer from './App.reducer';
+import AppReducer from './App.reducers';
 import {AppState, AppProps} from './App.model';
 
 export { App, AppReducer };
