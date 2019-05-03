@@ -1,6 +1,6 @@
-import { ApiUrl, ApiMethod } from './../../common/constants/index';
+import { ApiUrl, RequestMethod } from './../../common/constants/';
 import { LoginData } from './Login.model';
-import { fetchData } from '../../core/rest-client/RestClient.service';
+import { httpRequest } from '../../core/rest-client/RestClient.service';
 
 export function login(username: string, password: string): Promise<LoginData>{
 
@@ -15,5 +15,5 @@ export function login(username: string, password: string): Promise<LoginData>{
         password: password
     });
 
-    return fetchData(ApiUrl.AUTH_API_URL, ApiMethod.POST, headers, body);
+    return httpRequest(ApiUrl.AUTH_API_URL, RequestMethod.POST, headers, body);
 }

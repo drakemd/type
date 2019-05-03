@@ -5,7 +5,7 @@ export enum ApiRequestStatus{
     FAILED = 'FAILED'
 }
 
-export enum ApiMethod{
+export enum RequestMethod{
     POST = 'POST',
     GET = 'GET',
     PUT = 'PUT',
